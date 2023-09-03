@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Administrador Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+
+  <!-- <h1 class="center-content" style="padding-bottom: 50px">Bienvenido {{ userInfoReceived?.name }}!</h1> -->
+  
+  <ion-card #card>
+    <ion-card-content><h1 class="ion-padding" color="white">Bienvenido {{ adminInfoReceived?.name }}!</h1></ion-card-content>
+  </ion-card>
+  
+  <div class="controlAnim">
+  <ion-button  class="buttAnim" (click)="play()">></ion-button>
+  <ion-button class="buttAnim" (click)="stop()">||</ion-button>
+  </div>
+  
+  <ion-list [inset]="true">
+    <ion-list-header>
+      <ion-label>User Information: </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Usuario: {{ adminInfoReceived?.username }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre: {{ adminInfoReceived?.name }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido: {{ adminInfoReceived?.last_name }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tipo de Usario: {{ adminInfoReceived?.type }}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label id="contraseña" type="password">
+        Contraseña: {{ adminInfoReceived?.password}}
+      </ion-label>    
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="goHomeadmin()">Volver</ion-button>
+  <ion-button id="cambiarContraseña" color="warning">Cambiar Contraseña</ion-button>
+  <ion-alert
+  trigger="cambiarContraseña"
+  header="Cambiar contraseña"
+  [buttons]="alertButtons"
+  [inputs]="alertInputs"
+  ></ion-alert>
+</ion-content>

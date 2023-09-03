@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Portada -->
+  <div class="portada" >
+    <h1>TeLlevoApp</h1>  
+    <img src="assets/imgs/coche.png" alt="">
+  </div>
+    
+  <ion-card>
+
+    
+    <ion-card-header>
+      <ion-card-title>
+        Inicio de sesión
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label class="center-content"></ion-label>
+      <ion-input class="center-content" label="Usuario" [(ngModel)]="userLoginModal.username"></ion-input>
+      <ion-input class="center-content" label="Contraseña" [(ngModel)]="userLoginModal.password" type="password"></ion-input>
+    </ion-card-content>
+
+      <!--
+        Navigación con una función.
+      -->
+      <ion-button class="btn_acceder ion-padding" color="success" (click)="userLogin(userLoginModal)">Acceder</ion-button>
+          
+    
+  </ion-card>
+</ion-content>
+
+<!--
+  Docs
+  https://ionicframework.com/docs/angular/navigation
+-->
+
+
