@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
 
   listUser: UserModel[] = [
     new UserModel('Ricardo','Paredes','jgomez@ricparede',undefined,'USUARIO','ricparedes','ric123'),
-    new UserModel('Cecilia','Prado','ceprado@mail.com',undefined,'ADMIN','cecipprado','ceci123'),
+    new UserModel('Cecilia','Prado','ceprado@mail.com',undefined,'ADMIN','ceciprado','ceci123'),
     new UserModel('Carlos','Duran','carlduran@mail.com',undefined,'USUARIO','carlduran','carlos123'),
     new UserModel('Valentina','Ramos','valramos@mail.com',undefined,'ADMIN','valeramos','valentina123')
   ];
